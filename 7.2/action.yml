@@ -5,7 +5,7 @@ inputs:
   changed-files:
     description: 'changed files'
     required: true
-    default: ['./app/ImeeApplication.php']
+    default: ./app/ImeeApplication.php
 runs:
   using: 'docker'
   image: 'Dockerfile'
