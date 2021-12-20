@@ -1,4 +1,4 @@
-#!/bin/sh -l
+#!/bin/bash -l
 
 echo "Changed files: ${1}"
 export IFS=" "
