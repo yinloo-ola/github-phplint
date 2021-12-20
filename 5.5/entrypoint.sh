@@ -1,3 +1,11 @@
 #!/bin/sh -l
 
-sh -c "! (find . -type f -name \"*.php\" $1 -exec php -l -n {} \; | grep -v \"No syntax errors detected\")"
+echo "Changed files: ${1}"
+export IFS=" "
+changed_files=$1
+for file in $changed_files; do
+  if [[ $file == *.php ]]
+  then
+    php -l -n $file
+  fi
+done
