@@ -1,4 +1,4 @@
-FROM php:7.2
+FROM php:7.2-alpine
 
 LABEL "com.github.actions.name"="PHP Lint 7.2"
 LABEL "com.github.actions.description"="Run the native PHP linter"
