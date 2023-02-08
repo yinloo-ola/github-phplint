@@ -1,4 +1,4 @@
-FROM arm64v8/php:7.2-zts-alpine3.11
+FROM php:7.2
 
 LABEL "com.github.actions.name"="PHP Lint 7.2"
 LABEL "com.github.actions.description"="Run the native PHP linter"
