@@ -14,4 +14,4 @@ RUN apk update && apk add bash
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod 555 /entrypoint.sh
 # ENTRYPOINT ["/entrypoint.sh"]
-CMD ["sh", "/entrypoint.sh"]
+CMD ["/entrypoint.sh"]

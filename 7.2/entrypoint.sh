@@ -1,10 +1,10 @@
-#!/bin/bash -l
+#!/bin/ash
 
 echo "Changed files: ${1}"
 export IFS=" "
 changed_files=$1
 for file in $changed_files; do
-  if [[ $file == *.php ]]
+  if [ "${file: -4}" == ".php" ]
   then
     RESULTS=`php -l -n $file`
 
@@ -14,5 +14,7 @@ for file in $changed_files; do
     else
       echo $RESULTS
     fi
+  else
+    echo "skipping $file"
   fi
 done
