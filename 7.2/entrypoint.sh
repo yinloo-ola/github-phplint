@@ -11,6 +11,8 @@ for file in $changed_files; do
     if [ "$RESULTS" != "No syntax errors detected in $file" ] ; then
       echo $RESULTS
       exit 1
+    else
+      echo $RESULTS
     fi
   fi
 done
