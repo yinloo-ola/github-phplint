@@ -13,5 +13,7 @@ RUN apk update && apk add bash
 
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod 555 /entrypoint.sh
-# ENTRYPOINT ["/entrypoint.sh"]
-CMD ["/entrypoint.sh"]
+
+WORKDIR /github/workspace
+
+ENTRYPOINT ["/entrypoint.sh"]
