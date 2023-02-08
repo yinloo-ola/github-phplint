@@ -9,6 +9,6 @@ LABEL "repository"="http://github.com/dbfx/github-phplint"
 LABEL "homepage"="http://github.com/actions"
 LABEL "maintainer"="Dave B <dave@blakey.co>"
 
-ADD entrypoint.sh /run.sh
-RUN chmod 555 /run.sh
-ENTRYPOINT ["/run.sh"]
+ADD entrypoint.sh /entrypoint.sh
+RUN chmod 555 /entrypoint.sh
+CMD sh entrypoint.sh
