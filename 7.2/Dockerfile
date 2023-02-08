@@ -1,4 +1,4 @@
-FROM php:7.2.34-alpine3.12
+FROM php:7.2
 
 LABEL "com.github.actions.name"="PHP Lint 7.2"
 LABEL "com.github.actions.description"="Run the native PHP linter"
@@ -11,5 +11,4 @@ LABEL "maintainer"="Dave B <dave@blakey.co>"
 
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod 555 /entrypoint.sh
-# ENTRYPOINT ["/entrypoint.sh"]
-CMD ["sh", "/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
