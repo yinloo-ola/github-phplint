@@ -11,4 +11,5 @@ LABEL "maintainer"="Dave B <dave@blakey.co>"
 
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod 555 /entrypoint.sh
-CMD sh entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["sh"]
