@@ -8,6 +8,6 @@ inputs:
     default: ./app/ImeeApplication.php
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'docker://tianhai/php-lint:7.2'
   args:
     - ${{ inputs.changed-files }}
